@@ -1,0 +1,204 @@
+body {
+    background: rgba(250, 249, 249, 0.829);
+    
+  }
+  
+  #container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto auto 0;
+    background: rgb(221, 243, 247);
+    display: grid;
+    grid-template-columns: 1fr auto ;
+  }
+  
+  
+
+  
+  #inputs-list {
+    background: rgb(223, 230, 245);
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .addBtn{
+    font-size: 15px;
+    color: rgb(255, 254, 254);
+    background: rgb(223, 230, 245);
+    margin-top: 6px;
+    padding: 12px;
+    border-radius: 2px;
+    border:none;
+  }
+  .fa-list-alt:hover {
+    background: rgb(231, 247, 246);
+  }
+  #myForm{
+      margin: 0;
+  }
+
+  input {
+    margin: 0.5%;
+    font-size: 1.5vw;
+    border: 1px solid rgb(224, 230, 245);
+    border-radius: 5px;
+  }
+  input[type='text']{
+      padding: 1px 0;
+  }
+  #input3{
+      padding-right: 0;
+  }
+  
+  input:focus {
+    background-color: rgb(243, 240, 240);
+    border: none;
+  }
+  
+  .itemList:nth-child(odd) {
+    background: rgb(250, 250, 249);
+  }
+  
+  /* #first {
+    position: relative;
+    text-align: center;
+  } */
+  
+  /* p {
+    font-size: 1.8vw;
+    color: rgb(202, 142, 3);
+  } */
+  
+  h1 {
+    background: #333;
+    border-color: #333;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    color: rgb(248, 202, 164);
+    margin-top: 0;
+    padding-top: 35px;
+    margin-bottom: 0;
+  }
+  
+  .grid1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+  }
+  .grid1 > div {
+    text-align: center;
+  }
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #gridH {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%;
+    margin: 0 0 80px auto;
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    background:#333;
+    margin-bottom: 0;
+  }
+  
+   #gridH #gridH-Child{
+    padding-right: 160px ;
+    padding-left: 5px;
+    text-align: left;
+    font-size: 18px;
+  }
+  #gridH > div {
+    background: rgb(42, 44, 44);
+    border: 1px dotted rgb(110, 107, 107);
+    height: 40px;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(223, 223, 223);
+    padding-top:10px; 
+  }
+  
+  #grid > div {
+    background: rgb(245, 244, 244);
+    border: 1px dotted whitesmoke;
+    height: 40px;
+    padding-top: 6px;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(82, 76, 76);
+  }
+  #grid > div:nth-child(odd) {
+    background: rgb(247, 250, 250);
+    color: #333;
+  }
+   h2 {
+    color: rgb(155, 152, 152);
+  } 
+  /* button {
+    padding: 3px;
+    margin: 3px;
+    outline: none;
+  } */
+  /* button:hover {
+    cursor: pointer;
+  } */
+  
+  .done {
+    text-decoration: line-through solid rgb(233, 119, 99);
+  }
+  .done:before {
+  
+    display: inline-block;
+    font-size: 25px;
+    color: rgb(233, 119, 99);
+    padding: 0 3px 0 0;
+  }
+
+  a,.goBtn{
+    background-color:rgb(60, 60, 102) ;
+    border: none;
+   color: white;
+    padding: 10px 30px;
+    text-align: center;
+   text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+   
+  }
+ 
+  .Btn{
+    background-color:rgb(60, 60, 102) ;
+    border: none;
+   color: white;
+    padding: 10px 30px;
+    text-align: center;
+   text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+
+  }
