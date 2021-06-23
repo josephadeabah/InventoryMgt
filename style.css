@@ -53,7 +53,12 @@ body {
   }
   input[type='text']{
       padding: 1px 0;
+      background: rgb(224, 230, 245);
   }
+  input[type='number']{
+    padding: 1px 0;
+    background: rgb(224, 230, 245);
+}
   #input3{
       padding-right: 0;
   }
@@ -164,13 +169,14 @@ body {
   
   .done {
     text-decoration: line-through solid rgb(233, 119, 99);
+    cursor: pointer;
   }
   .done:before {
-  
     display: inline-block;
     font-size: 25px;
     color: rgb(233, 119, 99);
     padding: 0 3px 0 0;
+    cursor: pointer;
   }
 
   a,.goBtn{

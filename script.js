@@ -103,6 +103,9 @@ const saveItems = function(e) {
     alert("Please add your inventories!!");
     return false;
   }
+  
+ 
+  
 
   // create an objects to push inside an array
   let itemInfo = {
@@ -151,9 +154,12 @@ const editItem = e => {
       price.value += itemInfos[i].price;
       itemInfos.splice(i, 1);
 
-      addButton.innerText = "Update";
+      addButton.innerText = "Update Stock";
       addButton.style.background = "rgb(60, 60, 102)";
       addButton.style.padding = "auto";
+      item.style.background = "white";
+      quantity.style.background = "white";
+      price.style.background = "white"
     }
   }
   localStorage.setItem("itemInfos", JSON.stringify(itemInfos));

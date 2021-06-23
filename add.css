@@ -1,0 +1,105 @@
+body {
+    background: rgba(250, 249, 249, 0.829);
+   
+    
+  }
+  
+div{
+    margin-top: 5px;
+    margin-bottom: 200px;
+    border: 1px dotted rgb(110, 107, 107);
+    margin-left: 257px;
+    margin-right:257px;
+}
+  
+
+  
+  #inputs-list {
+    background: rgb(223, 230, 245);
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .addBtn{
+    font-size: 15px;
+    color: rgb(255, 254, 254);
+    background: rgb(223, 230, 245);
+    margin-top: 6px;
+    padding: 12px;
+    border-radius: 2px;
+    border:none;
+  }
+  .fa-list-alt:hover {
+    background: rgb(231, 247, 246);
+  }
+  #myForm{
+      margin: 0;
+  }
+
+  input {
+    margin: 0.5%;
+    font-size: 1.5vw;
+    border: 1px solid rgb(224, 230, 245);
+    border-radius: 5px;
+  }
+  input[type='text']{
+      padding: 10px ;
+      
+  }
+  input[type='number']{
+    padding: 10px;
+    
+}
+ 
+  
+  input:focus {
+    background-color: rgb(243, 240, 240);
+    border: none;
+  }
+  
+
+  .grid1 {
+    display: grid;
+    grid-template-columns:  2fr;
+ 
+  }
+  
+  
+   h2 {
+    color: rgb(155, 152, 152);
+  } 
+  
+ 
+  a,.goBtn{
+    background-color:rgb(60, 60, 102) ;
+    border: none;
+   color: white;
+    padding: 10px 30px;
+    text-align: center;
+   text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+   
+  }
+ 
+  .Btn{
+    background-color:rgb(60, 60, 102) ;
+    border: none;
+   color: white;
+    padding: 10px 30px;
+    text-align: center;
+   text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+
+  }
