@@ -61,23 +61,27 @@ const displayItems = () => {
     let quantVal = parseInt(quantity.innerHTML);
     if(quantVal >= 1 || quantVal <= 20){
       container.appendChild(quantity).style.background = "orange";
+      container.appendChild(quantity).style.color = "white";
      }
      if(quantVal > 20){
       container.appendChild(quantity).style.background = "green";
+      container.appendChild(quantity).style.color = "white";
      }
      if(quantVal === 0){
       container.appendChild(quantity).style.background = "red";
+      container.appendChild(quantity).style.color = "white";
      }
      
      let arr = [];
      arr.push(quantVal);
-     console.log(arr);
-     let sum=0;
-     for(let index=0; index < arr.length;index++){
-      sum += arr[index];
-      console.log(sum)
-     }
-        
+     console.log(arr)
+  //    let sum = 0;
+  //  for(let index =0; index < arr.length; index++){
+  //    sum += arr[index];
+  //    console.log(sum)
+
+  //  }
+   
        
       
      
