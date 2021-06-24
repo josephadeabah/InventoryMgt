@@ -51,19 +51,35 @@ const displayItems = () => {
     edit.addEventListener("click", editItem);
     del.addEventListener("click", deleteItem);
 
+
+
     buttons.appendChild(del);
     buttons.appendChild(edit);
     container.appendChild(item);
     container.appendChild(quantity);
+    //console.log(quantity.innerHTML);
+    let quantVal = parseInt(quantity.innerHTML);
+    if(quantVal >= 1 || quantVal <= 20){
+      container.appendChild(quantity).style.background = "orange";
+     }
+     if(quantVal > 20){
+      container.appendChild(quantity).style.background = "green";
+     }
+     if(quantVal === 0){
+      container.appendChild(quantity).style.background = "red";
+     }
     container.appendChild(catg);
-    container.appendChild(desc);
+    container.appendChild(desc).style.textAlign ="left";
     //container.appendChild(id);
-
     
    // container.appendChild(date);
    
     container.appendChild(buttons);
+
+   
+    
   });
+  
 };
 
 // this function delete items from the list
@@ -108,13 +124,12 @@ const saveItems = function(e) {
     }
     return text;
   }
-  if (!item || !quantity || !catg) {
+  if (!item || !quantity || !catg || !desc) {
     alert("Please add your inventories!!");
     return false;
   }
   
  
-  
 
   // create an objects to push inside an array
   let itemInfo = {
@@ -171,8 +186,12 @@ const editItem = e => {
       addButton.style.padding = "auto";
       item.style.background = "white";
       quantity.style.background = "white";
-      catg.style.background = "white"
-      desc.style.background = "white"
+      catg.style.background = "white";
+      desc.style.background = "white";
+
+     
+
+     
       
 
     }
