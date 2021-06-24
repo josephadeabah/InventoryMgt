@@ -23,12 +23,16 @@ const displayItems = () => {
     const price = document.createElement("div");
     const id = document.createElement("div");
     const date = document.createElement("div");
+    const desc = document.createElement("div"); //Created new element
+
+    
 
     item.textContent = el.item;
     quantity.textContent = el.quantity;
     price.textContent = el.price;
     id.textContent = el.id;
     date.textContent = el.today;
+    desc.textContent = el.desc;
     if (el.completed === true) {
       item.className = "done";
     } else {
@@ -38,8 +42,8 @@ const displayItems = () => {
     item.addEventListener("click", taskCompleted);
 
     let buttons = document.createElement("div"),
-      edit = document.createElement("button"),
-      del = document.createElement("button");
+    edit = document.createElement("button"),
+    del = document.createElement("button");
     del.id = el.id;
     edit.id = el.id2;
     edit.innerText = "edit";
@@ -52,8 +56,10 @@ const displayItems = () => {
     container.appendChild(item);
     container.appendChild(quantity);
     container.appendChild(price);
+    container.appendChild(desc);
     container.appendChild(id);
-    container.appendChild(date);
+   // container.appendChild(date);
+   
     container.appendChild(buttons);
   });
 };
@@ -83,6 +89,7 @@ const saveItems = function(e) {
   let quantity = document.querySelector("#input2").value;
   let price = document.querySelector("#input3").value;
   let date = new Date();
+  let desc = document.querySelector("#input4").value;
   let completed = false;
   let today = date.toDateString();
   let id = Math.random()
@@ -112,6 +119,7 @@ const saveItems = function(e) {
     item,
     quantity,
     price,
+    desc,
     completed,
     id,
     id2,
@@ -143,6 +151,7 @@ const editItem = e => {
   let item = document.querySelector("#input1");
   let quantity = document.querySelector("#input2");
   let price = document.querySelector("#input3");
+  let desc = document.querySelector("#input4");
   let addButton = document.querySelector("#submit");
 
   let itemInfos = JSON.parse(localStorage.getItem("itemInfos"));
@@ -152,6 +161,7 @@ const editItem = e => {
       item.value += itemInfos[i].item;
       quantity.value += itemInfos[i].quantity;
       price.value += itemInfos[i].price;
+      desc.value += itemInfos[i].desc;
       itemInfos.splice(i, 1);
 
       addButton.innerText = "Update Stock";
@@ -160,6 +170,7 @@ const editItem = e => {
       item.style.background = "white";
       quantity.style.background = "white";
       price.style.background = "white"
+      desc.style.background = "white"
     }
   }
   localStorage.setItem("itemInfos", JSON.stringify(itemInfos));
