@@ -66,6 +66,7 @@ body {
       
   }
   
+  
   input:focus {
     background-color: rgb(243, 240, 240);
     border: none;
@@ -161,8 +162,7 @@ body {
   #grid > div {
     background: rgb(245, 244, 244);
     border: 1px dotted whitesmoke;
-    height: 40px;
-    padding-top: 6px;
+    height: auto;
     font-family: "Lato", sans-serif;
     font-weight: bold;
     font-size: 20px;
