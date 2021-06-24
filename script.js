@@ -2,7 +2,7 @@
 let add = document.querySelector("#submit");
 add.addEventListener("click", function() {
   if (this.innerText == "Update") {
-    this.innerText = "Add";
+    // this.innerText = "Add";
     this.style.background = "lightslategrey";
   }
   saveItems();
@@ -20,7 +20,7 @@ const displayItems = () => {
   itemInfos.forEach(function(el) {
     const item = document.createElement("div");
     const quantity = document.createElement("div");
-    const price = document.createElement("div");
+    const catg = document.createElement("div");
     const id = document.createElement("div");
     const date = document.createElement("div");
     const desc = document.createElement("div"); //Created new element
@@ -29,7 +29,7 @@ const displayItems = () => {
 
     item.textContent = el.item;
     quantity.textContent = el.quantity;
-    price.textContent = el.price;
+    catg.textContent = el.catg;
     id.textContent = el.id;
     date.textContent = el.today;
     desc.textContent = el.desc;
@@ -55,9 +55,11 @@ const displayItems = () => {
     buttons.appendChild(edit);
     container.appendChild(item);
     container.appendChild(quantity);
-    container.appendChild(price);
+    container.appendChild(catg);
     container.appendChild(desc);
-    container.appendChild(id);
+    //container.appendChild(id);
+
+    
    // container.appendChild(date);
    
     container.appendChild(buttons);
@@ -87,7 +89,7 @@ const deleteItem = function(e) {
 const saveItems = function(e) {
   let item = document.querySelector("#input1").value;
   let quantity = document.querySelector("#input2").value;
-  let price = document.querySelector("#input3").value;
+  let catg = document.querySelector("#input3").value;
   let date = new Date();
   let desc = document.querySelector("#input4").value;
   let completed = false;
@@ -106,7 +108,7 @@ const saveItems = function(e) {
     }
     return text;
   }
-  if (!item || !quantity || !price) {
+  if (!item || !quantity || !catg) {
     alert("Please add your inventories!!");
     return false;
   }
@@ -118,7 +120,7 @@ const saveItems = function(e) {
   let itemInfo = {
     item,
     quantity,
-    price,
+    catg,
     desc,
     completed,
     id,
@@ -150,7 +152,7 @@ const saveItems = function(e) {
 const editItem = e => {
   let item = document.querySelector("#input1");
   let quantity = document.querySelector("#input2");
-  let price = document.querySelector("#input3");
+  let catg = document.querySelector("#input3");
   let desc = document.querySelector("#input4");
   let addButton = document.querySelector("#submit");
 
@@ -160,7 +162,7 @@ const editItem = e => {
     if (itemInfos[i].id2 == e.target.id) {
       item.value += itemInfos[i].item;
       quantity.value += itemInfos[i].quantity;
-      price.value += itemInfos[i].price;
+      catg.value += itemInfos[i].catg;
       desc.value += itemInfos[i].desc;
       itemInfos.splice(i, 1);
 
@@ -169,8 +171,10 @@ const editItem = e => {
       addButton.style.padding = "auto";
       item.style.background = "white";
       quantity.style.background = "white";
-      price.style.background = "white"
+      catg.style.background = "white"
       desc.style.background = "white"
+      
+
     }
   }
   localStorage.setItem("itemInfos", JSON.stringify(itemInfos));
