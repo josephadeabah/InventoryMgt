@@ -60,13 +60,30 @@ body {
     background: rgb(224, 230, 245);
 }
   #input3{
+    width: 100%;
       padding-right: 0;
+      color: rgb(224, 230, 245);
+      
   }
   
   input:focus {
     background-color: rgb(243, 240, 240);
     border: none;
   }
+
+  
+  input[type=cat], select {
+    
+    padding: 1px;
+    
+    font-size: 1.5vw;
+    border: 1px solid rgb(224, 230, 245);
+    border-radius: 5px;
+    display: inline-block;
+    border-radius: 4px;
+    background: rgb(224, 230, 245);
+  }
+ 
   
   .itemList:nth-child(odd) {
     background: rgb(250, 250, 249);
@@ -103,7 +120,7 @@ body {
   }
   #grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     width: 100%;
     margin: 0 auto;
