@@ -127,10 +127,47 @@ body {
     margin: 0 auto;
     text-align: center;
   }
+
+  #gridH-Child-indicator1{
+    width: 100%;
+    margin: 0 0 80px auto;
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+    background:red;
+    margin-bottom: 0;
+  }
+  #gridH-Child-indicator2{
+    width: 100%;
+    margin: 0 0 80px auto;
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+    background:orange;
+    margin-bottom: 0;
+  }
+  #gridH-Child-indicator3{
+    width: 100%;
+    margin: 0 0 80px auto;
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+    background:green;
+    margin-bottom: 0;
+  }
+
+
+
   #gridH {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     width: 100%;
     margin: 0 0 80px auto;
     text-align: left;
@@ -148,14 +185,15 @@ body {
     text-align: left;
     font-size: 18px;
   }
+
   #gridH > div {
-    background: rgb(42, 44, 44);
+    /* background: rgb(42, 44, 44); */
     border: 1px dotted rgb(110, 107, 107);
     height: 40px;
     font-family: "Lato", sans-serif;
     font-weight: bold;
     font-size: 15px;
-    color: rgb(223, 223, 223);
+    color: rgb(255, 255, 255);
     padding-top:10px; 
   }
   
