@@ -68,6 +68,22 @@ const displayItems = () => {
      if(quantVal === 0){
       container.appendChild(quantity).style.background = "red";
      }
+     
+     let arr = [];
+     arr.push(quantVal);
+     console.log(arr);
+     let sum=0;
+     for(let index=0; index < arr.length;index++){
+      sum += arr[index];
+      console.log(sum)
+     }
+        
+       
+      
+     
+
+
+
     container.appendChild(catg);
     container.appendChild(desc).style.textAlign ="left";
     //container.appendChild(id);
