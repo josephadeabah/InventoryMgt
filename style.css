@@ -162,8 +162,6 @@ body {
     margin-bottom: 0;
   }
 
-
-
   #gridH {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
