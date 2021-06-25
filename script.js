@@ -18,9 +18,7 @@ const displayItems = () => {
   container.innerHTML = "";
 
   let totalQuantity = 0;
-  let totalOutofStock = 0;
-  let totalAllMoutOfStock = 0;
-  let totalInstock = 0;
+ 
 
 
   itemInfos.forEach(function(el) {
