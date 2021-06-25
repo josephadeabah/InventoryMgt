@@ -17,6 +17,12 @@ const displayItems = () => {
 
   container.innerHTML = "";
 
+  let totalQuantity = 0;
+  let totalOutofStock = 0;
+  let totalAllMoutOfStock = 0;
+  let totalInstock = 0;
+
+
   itemInfos.forEach(function(el) {
     const item = document.createElement("div");
     const quantity = document.createElement("div");
@@ -25,6 +31,11 @@ const displayItems = () => {
     const date = document.createElement("div");
     const desc = document.createElement("div"); //Created new element
 
+    totalQuantity += parseInt(el.quantity);
+    //totalOutofStock += parseInt(el.quantity);
+    if(container.appendChild(quantity).style.background = "red"){
+     document.querySelector("#gridH-Child-indicator1").innerText = `Out of Stock`;
+  }
     
 
     item.textContent = el.item;
@@ -58,6 +69,7 @@ const displayItems = () => {
     container.appendChild(item);
     container.appendChild(quantity);
     //console.log(quantity.innerHTML);
+    
     let quantVal = parseInt(quantity.innerHTML);
     if(quantVal >= 1 || quantVal <= 20){
       container.appendChild(quantity).style.background = "orange";
@@ -71,22 +83,7 @@ const displayItems = () => {
       container.appendChild(quantity).style.background = "red";
       container.appendChild(quantity).style.color = "white";
      }
-     
-     let arr = [];
-     arr.push(quantVal);
-     console.log(arr)
-  //    let sum = 0;
-  //  for(let index =0; index < arr.length; index++){
-  //    sum += arr[index];
-  //    console.log(sum)
-
-  //  }
-   
        
-      
-     
-
-
 
     container.appendChild(catg);
     container.appendChild(desc).style.textAlign ="left";
@@ -99,6 +96,11 @@ const displayItems = () => {
    
     
   });
+
+  document.querySelector("#totalQ").innerText = `Qty: ${totalQuantity}`;
+  console.log(totalQuantity);
+  
+  
   
 };
 
